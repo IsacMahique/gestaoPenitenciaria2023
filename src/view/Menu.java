@@ -68,9 +68,7 @@ public class Menu extends javax.swing.JFrame {
         jlConsultas.setForeground(java.awt.Color.white);
         jlConsultas.setText("Consultas");
 
-        jbRegistarProcesso.setBackground(new java.awt.Color(102, 0, 102));
         jbRegistarProcesso.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jbRegistarProcesso.setForeground(java.awt.Color.white);
         jbRegistarProcesso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/prancheta.png"))); // NOI18N
         jbRegistarProcesso.setText(" REGISTAR PROCESSO ");
         jbRegistarProcesso.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.white));
@@ -86,9 +84,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jbRegistarFuncionario.setBackground(new java.awt.Color(102, 0, 102));
         jbRegistarFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jbRegistarFuncionario.setForeground(java.awt.Color.white);
         jbRegistarFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/registo.png"))); // NOI18N
         jbRegistarFuncionario.setText("REGISTAR FUNCIONARIO");
         jbRegistarFuncionario.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.white));
@@ -98,9 +94,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jbListarProcesso.setBackground(new java.awt.Color(102, 0, 102));
         jbListarProcesso.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jbListarProcesso.setForeground(java.awt.Color.white);
         jbListarProcesso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lista-de-desejos.png"))); // NOI18N
         jbListarProcesso.setText("CONSULTAR PROCESSOS");
         jbListarProcesso.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.white));
@@ -110,9 +104,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jbConsultarFuncionario.setBackground(new java.awt.Color(102, 0, 102));
         jbConsultarFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jbConsultarFuncionario.setForeground(java.awt.Color.white);
         jbConsultarFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/envolvimento-dos-funcionarios.png"))); // NOI18N
         jbConsultarFuncionario.setText("CONSULTAR FUNCIONARIOS");
         jbConsultarFuncionario.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.white));
@@ -122,9 +114,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jbEstatistica.setBackground(new java.awt.Color(102, 0, 102));
         jbEstatistica.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jbEstatistica.setForeground(new java.awt.Color(255, 255, 255));
         jbEstatistica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/estatisticas.png"))); // NOI18N
         jbEstatistica.setText("RELATORIO GERAL");
         jbEstatistica.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -134,9 +124,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(102, 0, 102));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/2992441_ecology_recycle_recyclingwaste_icon.png"))); // NOI18N
         jButton1.setText("       PROCESSOS ELIMINADOS");
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -146,9 +134,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(102, 0, 102));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/2992441_ecology_recycle_recyclingwaste_icon.png"))); // NOI18N
         jButton2.setText("FUNCIONARIOS ELIMINADOS");
         jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -231,7 +217,7 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jbEstatistica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbRegistarFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
                     .addComponent(jbRegistarProcesso, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 380, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 374, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jbConsultarFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
                     .addComponent(jbListarProcesso, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)

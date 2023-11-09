@@ -34,7 +34,6 @@ public class MenuFuncionario extends javax.swing.JFrame {
     private void initComponents() {
 
         jbListarProcesso = new javax.swing.JButton();
-        jbConsultarFuncionario = new javax.swing.JButton();
         jbEstatistica = new javax.swing.JButton();
         jlImagem = new javax.swing.JLabel();
         jbVisitas = new javax.swing.JButton();
@@ -42,15 +41,15 @@ public class MenuFuncionario extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jmiTerminarSessao = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jmiFecharPrograma = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1250, 670));
 
-        jbListarProcesso.setBackground(new java.awt.Color(102, 0, 102));
         jbListarProcesso.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jbListarProcesso.setForeground(java.awt.Color.white);
         jbListarProcesso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lista-de-desejos.png"))); // NOI18N
         jbListarProcesso.setText("CONSULTAR PROCESSOS");
         jbListarProcesso.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.white));
@@ -60,23 +59,9 @@ public class MenuFuncionario extends javax.swing.JFrame {
             }
         });
 
-        jbConsultarFuncionario.setBackground(new java.awt.Color(102, 0, 102));
-        jbConsultarFuncionario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jbConsultarFuncionario.setForeground(java.awt.Color.white);
-        jbConsultarFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/envolvimento-dos-funcionarios.png"))); // NOI18N
-        jbConsultarFuncionario.setText("CONSULTAR FUNCIONARIOS");
-        jbConsultarFuncionario.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.Color.white));
-        jbConsultarFuncionario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbConsultarFuncionarioActionPerformed(evt);
-            }
-        });
-
-        jbEstatistica.setBackground(new java.awt.Color(102, 0, 102));
         jbEstatistica.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jbEstatistica.setForeground(new java.awt.Color(255, 255, 255));
         jbEstatistica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/estatisticas.png"))); // NOI18N
-        jbEstatistica.setText("RELATORIO GERAL");
+        jbEstatistica.setText("RELATORIO GERAL             ");
         jbEstatistica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbEstatisticaActionPerformed(evt);
@@ -84,25 +69,20 @@ public class MenuFuncionario extends javax.swing.JFrame {
         });
 
         jlImagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/n-removebg-preview.png"))); // NOI18N
-        jlImagem.setText("jLabel1");
         jlImagem.setPreferredSize(new java.awt.Dimension(541, 541));
 
-        jbVisitas.setBackground(new java.awt.Color(102, 0, 102));
         jbVisitas.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jbVisitas.setForeground(new java.awt.Color(255, 255, 255));
         jbVisitas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/visitantes.png"))); // NOI18N
-        jbVisitas.setText("        VISITAS");
+        jbVisitas.setText("      VISITAS                           ");
         jbVisitas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbVisitasActionPerformed(evt);
             }
         });
 
-        jbOcorrencias.setBackground(new java.awt.Color(102, 0, 102));
         jbOcorrencias.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jbOcorrencias.setForeground(new java.awt.Color(255, 255, 255));
         jbOcorrencias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lista.png"))); // NOI18N
-        jbOcorrencias.setText("OCORRENCIAS");
+        jbOcorrencias.setText("OCORRENCIAS                    ");
         jbOcorrencias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbOcorrenciasActionPerformed(evt);
@@ -125,6 +105,21 @@ public class MenuFuncionario extends javax.swing.JFrame {
         jMenu1.add(jmiTerminarSessao);
 
         jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("EXPLORAR");
+        jMenu2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+
+        jMenuItem1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/envolvimento-dos-funcionarios.png"))); // NOI18N
+        jMenuItem1.setText("LISTAR FUNCIONARIOS");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu2);
 
         jmiFecharPrograma.setText("FECHAR");
         jmiFecharPrograma.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -149,35 +144,32 @@ public class MenuFuncionario extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jbEstatistica, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
-                    .addComponent(jbVisitas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbConsultarFuncionario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
-                    .addComponent(jbListarProcesso, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
-                    .addComponent(jbOcorrencias, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 201, Short.MAX_VALUE)
-                .addComponent(jlImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(211, 211, 211))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jbEstatistica, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbListarProcesso, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbVisitas, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbOcorrencias, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 235, Short.MAX_VALUE)
+                .addComponent(jlImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(jlImagem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
+                        .addGap(51, 51, 51)
                         .addComponent(jbListarProcesso, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jbConsultarFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(26, 26, 26)
                         .addComponent(jbVisitas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(32, 32, 32)
                         .addComponent(jbOcorrencias, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jbEstatistica, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(94, Short.MAX_VALUE))
+                        .addGap(28, 28, 28)
+                        .addComponent(jbEstatistica, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(jlImagem, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
 
         pack();
@@ -187,11 +179,6 @@ public class MenuFuncionario extends javax.swing.JFrame {
         new ListagemProcesso();
         this.dispose();
     }//GEN-LAST:event_jbListarProcessoActionPerformed
-
-    private void jbConsultarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbConsultarFuncionarioActionPerformed
-        FuncionarioController f = new FuncionarioController("listar", 2);
-        this.dispose();
-    }//GEN-LAST:event_jbConsultarFuncionarioActionPerformed
 
     private void jmiTerminarSessaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTerminarSessaoActionPerformed
         // TODO add your handling code here:
@@ -235,6 +222,11 @@ public class MenuFuncionario extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jbVisitasActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        FuncionarioController f = new FuncionarioController("listar", 2);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -272,9 +264,10 @@ public class MenuFuncionario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JButton jbConsultarFuncionario;
     private javax.swing.JButton jbEstatistica;
     private javax.swing.JButton jbListarProcesso;
     private javax.swing.JButton jbOcorrencias;

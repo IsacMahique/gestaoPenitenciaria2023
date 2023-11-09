@@ -397,6 +397,14 @@ public class Funcionario extends javax.swing.JFrame {
         jbGravar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jbGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/8726195_save_floppy_icon.png"))); // NOI18N
         jbGravar.setText(" Gravar");
+        jbGravar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jbGravarMouseDragged(evt);
+            }
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jbGravarMouseMoved(evt);
+            }
+        });
         jbGravar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbGravarActionPerformed(evt);
@@ -519,6 +527,15 @@ public class Funcionario extends javax.swing.JFrame {
         new Menu();
         this.dispose();
     }//GEN-LAST:event_jbVoltarActionPerformed
+
+    private void jbGravarMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbGravarMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbGravarMouseMoved
+
+    private void jbGravarMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbGravarMouseDragged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jbGravarMouseDragged
 
     /**
      * @param args the command line arguments
