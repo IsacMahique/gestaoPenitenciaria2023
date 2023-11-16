@@ -5,6 +5,8 @@
 
 ### Tela de Login
 ### credenciais:
+Antes de tudo é recomendado importar todas as bibliotecas localizadas na pasta " dis > lib ";
+A database foi feita com base em jpa "sql", para executar deverá criar apenas uma base de dados com nome "Penitenciaria2023"
 #### para menu administrador : 
 usuario: dmi
 
